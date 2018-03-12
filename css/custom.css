@@ -412,6 +412,12 @@ hr
 .port
 {
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tools{
+    width: 400px;
+    height: 170px;
 }
 /*------------------------------------------------------------------------------------------------------
                                 price-table
