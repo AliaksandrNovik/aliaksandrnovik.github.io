@@ -456,7 +456,7 @@
 	    	</div>	
 	    </section>	<!-- clients -->
 
-		<a href="http://www.123formbuilder.com/form-3507353/My-Form" class="blueLink13">Contact us</a>
+		
 
 		<!-- contact -->
 	    <section id= "contact">
@@ -495,39 +495,17 @@
 								<textarea class="form-control" rows="6" type= "text" placeholder="Your Message" required name="Subject"></textarea>
 							</div>
 
-                                                        <div class="g-recaptcha" data-sitekey="6Le9-U0UAAAAAKJqaaASiLHCbsyj0jPCK2yZY0d5"></div>
-
+                                                                                    <div class="g-recaptcha" data-sitekey="6Le9-U0UAAAAAKJqaaASiLHCbsyj0jPCK2yZY0d5"></div>
 							<!-- localhost debig
-							<div class="g-recaptcha" data-sitekey="6Lcu-E0UAAAAADxTluiB2o-VJwk1Lre3iElqnMQY"></div>
--->
+
+                                                        <div class="g-recaptcha" data-sitekey="6Lcu-E0UAAAAADxTluiB2o-VJwk1Lre3iElqnMQY"></div>
+ -->
 							<input class="btn btn-primary send" type="submit" value="Submit" onclick="foo()">
+
 						</form>
 					</div>	
 				</div>
-				<div class= "row">
-					<div class= "col-md-6 col-md-offset-3 text-center">
-						<ul class="socials-icons">
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Twitter" class="twitter"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Google +" class="google-plus"><i class="fa fa-google-plus"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Pinterest" class="pinterest"><i class="fa fa-pinterest"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Connect with Skype" class="skype"><i class="fa fa-skype"></i></a>
-							</li>
-						</ul>
-					</div>
-				</div>
+
 			</div>
 	    </section>	<!-- contacts --> 
 			
@@ -540,11 +518,21 @@
 			</div>
 			<div class= "row">
 				<div class= "copyright text-center">
+					<i class="fas fa-envelope"></i>
 					<p> © 2018 TASolutions. Designed and Developed by TASolutions team</p>
 				</div>
 			</div>
 		</section><!-- footer -->
-
+		<div class="modal" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+			<div class="modal-header">
+				<h1>Please Wait</h1>
+			</div>
+			<div class="modal-body">
+				<div id="ajax_loader">
+					<img src="img/Spinner-1.2s-162px.gif" style="display: block; margin-left: auto; margin-right: auto;">
+				</div>
+			</div>
+		</div>
 		<!-- js -->
 		<script>
 			$(document).ready(function() {
@@ -622,12 +610,17 @@
             var service_id = "gmail";
 
             var template_id = "template_hHbPb82w";
+            $('#pleaseWaitDialog').modal();
+
             document.querySelector("input.send").value='Submiting...';
             emailjs.send(service_id,template_id,params)
                 .then(function(){
+                    $('#pleaseWaitDialog').modal("hide");
                     document.querySelector("input.send").value='Submit';
                     alert("Your message was sent directly to na49526@yandex.ru. We will ping you ASAP");
+
                 }, function(err) {
+                    $('#pleaseWaitDialog').modal("hide");
                     alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
                     document.querySelector("input.send").value='Submit';
                 });
