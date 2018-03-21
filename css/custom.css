@@ -671,6 +671,8 @@ a
  }
  .send
  {
+     width: 50%;
+     margin-top: 20px;
     float: left;
  }
  .map
