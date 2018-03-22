@@ -21,6 +21,26 @@ a:hover {
     color: #000;
 }
 
+.contacts{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 28px;
+    color: white;
+}
+.contacts i a{
+    font-size: 1.49333em;
+}
+.contacts a{
+    font-size: 1.49333em;
+}
+
+.contacts a:hover{
+    color: white;
+    font-size: 1.49333em;
+}
+
 .btn {
     border-radius: 0;
     transition: background 0.5s cubic-bezier(.17,.67,.83,.67);
@@ -146,7 +166,7 @@ iframe
     background-color: rgba(0,0,0,0.19);
 }
 .navbar-default .navbar-nav>li>a {
-    font-size: 16px;
+    font-size: 20px;
     transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
     color: #E5E5E5;
     margin: 5px 20px;
@@ -201,7 +221,7 @@ iframe
     letter-spacing: 2px;
 }
 .rene {
-    font-size: 120px;
+    font-size: 160px;
     color: white;
     font-family: "omnes-pro", "Helvetica", sans-serif;
     font-weight: 300;
@@ -269,7 +289,7 @@ Our service
     font-size: 33px;
 }
 
-.service-icon i 
+.service-icon i
 {
     padding: 20px 0px;
     font-size: 5em;
