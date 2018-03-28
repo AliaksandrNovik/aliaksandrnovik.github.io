@@ -425,12 +425,15 @@
                     </div>
                     <!-- github.io
                     <div class="g-recaptcha" data-sitekey="6Le9-U0UAAAAAKJqaaASiLHCbsyj0jPCK2yZY0d5"></div>
-                    -->
+
+
+                    localhost debig
+                    <div class="g-recaptcha" data-sitekey="6Lcu-E0UAAAAADxTluiB2o-VJwk1Lre3iElqnMQY"></div>
+                      -->
                     <div class="g-recaptcha" data-sitekey="6LcEbU8UAAAAABPqsr4VuhsDXbxOFxqs5uqm8XyX"></div>
-                    <!-- localhost debig
-                   <div class="g-recaptcha" data-sitekey="6Lcu-E0UAAAAADxTluiB2o-VJwk1Lre3iElqnMQY"></div>
-  -->
-                   <input class="btn btn-primary send" type="submit" value="Submit" onclick="foo()">
+
+
+                   <input class="btn btn-primary send" type="submit" value="Submit">
 
                </form>
            </div>
@@ -527,19 +530,14 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
-    $("form").submit(function (event) {
-
+    var myform = $("form#myform");
+    myform.submit(function (event) {
         var recaptcha = $("#g-recaptcha-response").val();
         if (recaptcha === "") {
             event.preventDefault();
             alert("Please check the recaptcha");
+            return;
         }
-    });
-</script>
-
-<script>
-    var myform = $("form#myform");
-    myform.submit(function (event) {
         event.preventDefault();
 
         var params = myform.serializeArray().reduce(function (obj, item) {
