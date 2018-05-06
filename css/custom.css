@@ -849,6 +849,20 @@ form {
 /* ================================================================================================================
                         Media Query
 ================================================================================================================== */
+@media (max-width: 850px) {
+    .rene {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rene {
+        margin-top: 164px;
+    }
+}
+
+
+
 @media (max-width: 515px) {
     .rene {
         font-size: 70px;
@@ -856,8 +870,14 @@ form {
 }
 
 @media (max-width: 405px) {
-    #heading-text h3 {
-        font-size: 45px;
+    .rene {
+        margin-top: 2px;
+    }
+    .main_content{
+        padding: 0px;
+    }
+    div.text-center.starting-text h2{
+        display: none;
     }
 }
 
