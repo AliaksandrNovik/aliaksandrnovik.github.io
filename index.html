@@ -107,7 +107,6 @@
                 <h2>Welcome to Test Automation world</h2>
 
 
-
                 <div class="row text-center main_content">
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <form method="post" id="myform2">
@@ -122,24 +121,28 @@
                                     <span class="input-group-btn" style="background-color: #3acab1;color: white">
                                         <input class="btn btn-primary submit-main" type="submit" value="Submit">
 	  								</span>
-                                    </div>
+                                </div>
 
 
                                 <! --- Modal dialog --->
-                                <div id= "myModal" class="modal" tabindex="-1" role="dialog">
+                                <div id="myModal" class="modal" tabindex="-1" role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Email was sent successfully. Thanks you!</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>  Your message was sent directly to na49526@yandex.ru. We will ping you ASAP</p>
+                                                <p> Your message was sent directly to na49526@yandex.ru. We will ping
+                                                    you ASAP</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="$('#myModal').modal('hide')">Close</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                                        onclick="$('#myModal').modal('hide')">Close
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -515,11 +518,10 @@
                                   name="Subject"></textarea>
                     </div>
 
+                    <!-- github.io
+                                      <div class="g-recaptcha" data-sitekey="6Lcu-E0UAAAAADxTluiB2o-VJwk1Lre3iElqnMQY"></div>
 
-                    <!-- github.io <div class="g-recaptcha" data-sitekey="6Lcu-E0UAAAAADxTluiB2o-VJwk1Lre3iElqnMQY"></div>
-                                        localhost debig
-                                          -->
-
+                                     -->
                     <div class="g-recaptcha" data-sitekey="6LcEbU8UAAAAABPqsr4VuhsDXbxOFxqs5uqm8XyX"></div>
 
 
@@ -661,8 +663,8 @@
 </script>
 
 <script>
-    var myform = $("form#myform2");
-    myform.submit(function (event) {
+    var myform2 = $("form#myform2");
+    myform2.submit(function (event) {
 
         event.preventDefault();
 
@@ -694,9 +696,6 @@
         return false;
     });
 </script>
-
-
-
 
 
 </body>
